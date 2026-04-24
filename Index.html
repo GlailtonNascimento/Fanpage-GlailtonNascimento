@@ -14,8 +14,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a192f;
-            color: #333;
+            background: #f4f6f9;
+            color: #2c3e50;
             padding: 20px;
         }
 
@@ -26,26 +26,26 @@
 
         /* Cabeçalho */
         .header {
-            background: linear-gradient(135deg, #112240 0%, #1a365d 100%);
+            background: #1e2a47;
             border-radius: 20px;
-            padding: 30px;
+            padding: 35px 30px;
             text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border: 1px solid rgba(100, 108, 255, 0.2);
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #5c6ac4, #7c3aed);
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
             overflow: hidden;
-            border: 3px solid #63b3ed;
+            border: 4px solid #ffffff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .avatar img {
@@ -61,12 +61,13 @@
         }
 
         .header p {
-            color: #a0aec0;
-            margin-bottom: 20px;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+            font-size: 16px;
         }
 
         .btn-cv {
-            background: linear-gradient(135deg, #5c6ac4, #7c3aed);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
             color: white;
             padding: 12px 30px;
             border: none;
@@ -76,13 +77,15 @@
             text-decoration: none;
             display: inline-block;
             margin: 5px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
             font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .btn-cv:hover {
             transform: scale(1.05);
-            background: linear-gradient(135deg, #6b7bd4, #8b5cf6);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            box-shadow: 0 5px 15px rgba(59,130,246,0.4);
         }
 
         .btn-contato {
@@ -97,24 +100,27 @@
             display: inline-block;
             margin: 5px;
             font-weight: 600;
+            transition: transform 0.3s;
         }
 
         .btn-contato:hover {
+            transform: scale(1.05);
             background: #20b859;
         }
 
         .contatos {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .contatos a {
             text-decoration: none;
             margin: 0 8px;
             font-size: 14px;
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 25px;
             display: inline-block;
             transition: transform 0.2s;
+            font-weight: 500;
         }
 
         .contatos a:hover {
@@ -128,17 +134,17 @@
         .section-title {
             text-align: center;
             font-size: 32px;
-            color: #ffffff;
-            margin-bottom: 30px;
+            color: #1e2a47;
+            margin-bottom: 35px;
             position: relative;
         }
 
         .section-title:after {
             content: '';
             display: block;
-            width: 60px;
+            width: 70px;
             height: 4px;
-            background: #5c6ac4;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
             margin: 15px auto 0;
             border-radius: 2px;
         }
@@ -146,26 +152,26 @@
         .projetos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            gap: 30px;
+            margin-bottom: 50px;
         }
 
         .card {
             background: #ffffff;
-            border-radius: 15px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
         }
 
         .card-img {
-            height: 180px;
-            background: linear-gradient(135deg, #5c6ac4, #7c3aed);
+            height: 170px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -173,42 +179,43 @@
         }
 
         .card-content {
-            padding: 20px;
+            padding: 22px;
         }
 
         .card h3 {
             font-size: 22px;
             margin-bottom: 10px;
-            color: #2d3748;
+            color: #1e2a47;
         }
 
         .card p {
-            color: #4a5568;
+            color: #5a6c7d;
             margin-bottom: 15px;
             line-height: 1.5;
+            font-size: 14px;
         }
 
         .card-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .tech-badge {
-            background: #edf2f7;
-            padding: 4px 12px;
+            background: #eef2ff;
+            padding: 5px 14px;
             border-radius: 20px;
             font-size: 12px;
-            color: #5c6ac4;
+            color: #3b82f6;
             font-weight: 500;
         }
 
         .card-link {
             display: inline-block;
-            background: #5c6ac4;
+            background: #3b82f6;
             color: white;
-            padding: 8px 20px;
+            padding: 8px 22px;
             border-radius: 25px;
             text-decoration: none;
             font-size: 14px;
@@ -217,15 +224,16 @@
         }
 
         .card-link:hover {
-            background: #7c3aed;
+            background: #8b5cf6;
         }
 
         .footer {
             text-align: center;
             padding: 30px;
-            color: #a0aec0;
-            border-top: 1px solid rgba(100, 108, 255, 0.2);
+            color: #5a6c7d;
+            border-top: 1px solid #e2e8f0;
             margin-top: 20px;
+            font-size: 13px;
         }
 
         .footer p {
@@ -251,7 +259,7 @@
         <!-- CABEÇALHO -->
         <div class="header">
             <div class="avatar">
-                <img src="https://lh3.googleusercontent.com/d/1Paf44RHi0lC9BC0c6addN1fNr2Ko6isc" alt="Glailton Nascimento">
+                <img src="foto-perfil.jpg" alt="Glailton Nascimento" id="fotoPerfil">
             </div>
             <h1>Glailton Sant' Anna do Nascimento</h1>
             <p>🎯 Em transição para Prospecção Comercial | Promotor Vendedor (Lactalis/Batavo) | 6 projetos entregues</p>
@@ -282,7 +290,7 @@
 
     <script>
         const projetos = [
-            { icone: "🎯", nome: "Mapeia Lead", descricao: "Sistema de prospecção por CNAE. Busca empresas por segmento e estado em segundos.", tecnologias: ["Python", "Streamlit", "Pandas"], link: "https://-MapeiaLead.streamlit.app" },
+            { icone: "🎯", nome: "Mapeia Lead", descricao: "Sistema de prospecção por CNAE. Busca empresas por segmento e estado em segundos.", tecnologias: ["Python", "Streamlit", "Pandas"], link: "https://mapear-lead.streamlit.app" },
             { icone: "🧮", nome: "Conta Certa", descricao: "Conciliação financeira. Compara SIAC vs Operadora, mostra divergências por terminal.", tecnologias: ["Python", "Streamlit", "Pandas"], link: "https://conta-certa.streamlit.app" },
             { icone: "📦", nome: "OGGI WMS", descricao: "Sistema de Gestão Logística. Controle de missões, ruas, endereçamentos, equipe.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistemaoggi.netlify.app" },
             { icone: "📊", nome: "Sistema de Cotações", descricao: "Gestão de compras. Itens em falta, cotações de fornecedores, análise.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistema-cotacao.netlify.app" },
@@ -334,14 +342,14 @@ Atuar como Prospector/Consultor Comercial.
 • Segurança da Informação – Unifatecie (Previsão 2027)
 
 🚀 PROJETOS PRÓPRIOS (6 projetos no ar)
-• Mapeia Lead - Prospecção por CNAE
+• Mapeia Lead - Prospecção por CNAE (link: https://mapear-lead.streamlit.app)
 • Conta Certa - Conciliação financeira
 • OGGI WMS - Gestão logística
 • Sistema Cotações - Gestão de compras
 • NeuroApp - Apoio emocional
 • Portfólio - Site profissional
 
-🔗 Links dos Projetos: https://meu-blog-html.netlify.app
+🔗 Portfólio completo: https://meu-portfolio-glailton.netlify.app
 `;
             const blob = new Blob([curriculo], { type: 'text/plain' });
             const link = document.createElement('a');
@@ -355,4 +363,4 @@ Atuar como Prospector/Consultor Comercial.
         carregarProjetos();
     </script>
 </body>
-  </html>
+</html>
