@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Glailton Nascimento - Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a192f;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background: linear-gradient(135deg, #112240 0%, #1a365d 100%);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(100, 108, 255, 0.2);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #5c6ac4, #7c3aed);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid #63b3ed;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #a0aec0;
+            margin-bottom: 20px;
+        }
+
+        .btn-cv {
+            background: linear-gradient(135deg, #5c6ac4, #7c3aed);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+            transition: transform 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-cv:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #6b7bd4, #8b5cf6);
+        }
+
+        .btn-contato {
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        .btn-contato:hover {
+            background: #20b859;
+        }
+
+        .contatos {
+            margin-top: 20px;
+        }
+
+        .contatos a {
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .contatos a:hover {
+            transform: translateY(-2px);
+        }
+
+        .linkedin { background: #0077B5; color: white; }
+        .email { background: #EA4335; color: white; }
+        .github { background: #333; color: white; }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #5c6ac4;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .projetos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-img {
+            height: 180px;
+            background: linear-gradient(135deg, #5c6ac4, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .card p {
+            color: #4a5568;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .card-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tech-badge {
+            background: #edf2f7;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #5c6ac4;
+            font-weight: 500;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: #5c6ac4;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .card-link:hover {
+            background: #7c3aed;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #a0aec0;
+            border-top: 1px solid rgba(100, 108, 255, 0.2);
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .projetos-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .contatos a {
+                margin: 5px;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <div class="header">
+            <div class="avatar">
+                <img src="https://drive.google.com/uc?export=view&id=1Paf44RHi0lC9BC0c6addN1fNr2Ko6isc" alt="Glailton Nascimento">
+            </div>
+            <h1>Glailton Sant' Anna do Nascimento</h1>
+            <p>🎯 Em transição para Prospecção Comercial | Promotor Vendedor (Lactalis/Batavo) | 6 projetos entregues</p>
+            
+            <div>
+                <button class="btn-cv" id="btnDownloadCV">📄 Baixar Currículo</button>
+                <a href="https://wa.me/5581984386182?text=Olá%20Glailton,%20vi%20seu%20portfólio!" target="_blank" class="btn-contato">📱 WhatsApp</a>
+            </div>
+            
+            <div class="contatos">
+                <a href="https://www.linkedin.com/in/glailton-nascimento" target="_blank" class="linkedin">🔗 LinkedIn</a>
+                <a href="mailto:glailtonnascimento88@gmail.com" class="email">📧 E-mail</a>
+                <a href="https://github.com/GlailtonNascimento" target="_blank" class="github">🐙 GitHub</a>
+            </div>
+        </div>
+
+        <!-- SEÇÃO PROJETOS -->
+        <h2 class="section-title">🚀 Meus Projetos</h2>
+        <div class="projetos-grid" id="projetosGrid"></div>
+
+        <!-- RODAPÉ -->
+        <div class="footer">
+            <p>© 2025 Glailton Nascimento - Todos os direitos reservados</p>
+            <p>📞 (81) 9 9697-5227 | (81) 9 8438-6182</p>
+            <p>💼 Atualmente: Operador de Empilhadeira na Oggi Sorvetes | Em transição para área comercial/tecnologia</p>
+        </div>
+    </div>
+
+    <script>
+        const projetos = [
+            { icone: "🎯", nome: "Mapeia Lead", descricao: "Sistema de prospecção por CNAE. Busca empresas por segmento e estado em segundos.", tecnologias: ["Python", "Streamlit", "Pandas"], link: "https://-MapeiaLead-.streamlit.app" },
+            { icone: "🧮", nome: "Conta Certa", descricao: "Conciliação financeira. Compara SIAC vs Operadora, mostra divergências por terminal.", tecnologias: ["Python", "Streamlit", "Pandas"], link: "https://conta-certa.streamlit.app" },
+            { icone: "📦", nome: "OGGI WMS", descricao: "Sistema de Gestão Logística. Controle de missões, ruas, endereçamentos, equipe.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistemaoggi.netlify.app" },
+            { icone: "📊", nome: "Sistema de Cotações", descricao: "Gestão de compras. Itens em falta, cotações de fornecedores, análise.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistema-cotacao.netlify.app" },
+            { icone: "🧠", nome: "NeuroApp", descricao: "Apoio emocional. Simulador que acolhe e sugere melhorias para o dia a dia.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://meuneuroapp.netlify.app" },
+            { icone: "🌐", nome: "Portfólio Pessoal", descricao: "Site profissional com minha trajetória, habilidades e contatos.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://meu-blog-html.netlify.app" }
+        ];
+
+        function carregarProjetos() {
+            const grid = document.getElementById('projetosGrid');
+            grid.innerHTML = '';
+            projetos.forEach(proj => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img">${proj.icone}</div>
+                    <div class="card-content">
+                        <h3>${proj.nome}</h3>
+                        <p>${proj.descricao}</p>
+                        <div class="card-tech">
+                            ${proj.tecnologias.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+                        </div>
+                        <a href="${proj.link}" target="_blank" class="card-link">🔗 Acessar Projeto →</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function baixarCurriculo() {
+            const curriculo = `GLAILTON SANT ANNA DO NASCIMENTO
+📍 São Lourenço da Mata/PE | 📞 (81) 9 9697-5227 | (81) 9 8438-6182
+📧 glailtonnascimento88@gmail.com
+🔗 linkedin.com/in/glailton-nascimento
+
+🎯 OBJETIVO PROFISSIONAL
+Atuar como Prospector/Consultor Comercial.
+
+💼 EXPERIÊNCIA PROFISSIONAL
+• Promotor Vendedor | Lactalis do Brasil (Batavo) | Mar/2025 – Ago/2025
+  - Abertura de novos pontos de venda
+  - Estratégias para aumento de performance
+
+• Operador de Empilhadeira | Oggi Sorvetes | Ago/2025 – Atual
+
+• Outras experiências: Tambasa S/A, Novo Atacarejo, Intelbras, Saint-Gobain, M. Dias Branco
+
+🎓 FORMAÇÃO ACADÊMICA
+• Gestão Financeira – Unifatecie (Previsão 2026)
+• Segurança da Informação – Unifatecie (Previsão 2027)
+
+🚀 PROJETOS PRÓPRIOS (6 projetos no ar)
+• Mapeia Lead - Prospecção por CNAE
+• Conta Certa - Conciliação financeira
+• OGGI WMS - Gestão logística
+• Sistema Cotações - Gestão de compras
+• NeuroApp - Apoio emocional
+• Portfólio - Site profissional
+
+🔗 Links dos Projetos: https://meu-blog-html.netlify.app
+`;
+            const blob = new Blob([curriculo], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'Curriculo_Glailton.txt';
+            link.click();
+            URL.revokeObjectURL(link.href);
+        }
+
+        document.getElementById('btnDownloadCV').addEventListener('click', baixarCurriculo);
+        carregarProjetos();
+    </script>
+</body>
+  </html>
