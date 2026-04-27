@@ -24,7 +24,6 @@
             margin: 0 auto;
         }
 
-        /* Cabeçalho */
         .header {
             background: #1e2a47;
             border-radius: 20px;
@@ -256,19 +255,16 @@
 </head>
 <body>
     <div class="container">
-        <!-- CABEÇALHO -->
         <div class="header">
             <div class="avatar">
-                <img src="MinhafotoDigital.jpg" alt="Glailton Nascimento" id="fotoPerfil">
+                <img src="MinhafotoDigital.jpg" alt="Glailton Nascimento">
             </div>
             <h1>Glailton Sant' Anna do Nascimento</h1>
-            <p>🎯 Em transição para TI | Prospecção Comercial | 6 projetos entregues</p>
-            
+            <p>🎯 Em transição para TI | Prospecção Comercial | 5 projetos no ar</p>
             <div>
                 <button class="btn-cv" id="btnDownloadCV">📄 Baixar Currículo</button>
                 <a href="https://wa.me/5581984386182?text=Olá%20Glailton,%20vi%20seu%20portfólio!" target="_blank" class="btn-contato">📱 WhatsApp</a>
             </div>
-            
             <div class="contatos">
                 <a href="https://www.linkedin.com/in/glailton-nascimento" target="_blank" class="linkedin">🔗 LinkedIn</a>
                 <a href="mailto:glailtonnascimento88@gmail.com" class="email">📧 E-mail</a>
@@ -276,11 +272,9 @@
             </div>
         </div>
 
-        <!-- SEÇÃO PROJETOS -->
         <h2 class="section-title">🚀 Meus Projetos</h2>
         <div class="projetos-grid" id="projetosGrid"></div>
 
-        <!-- RODAPÉ -->
         <div class="footer">
             <p>© 2025 Glailton Nascimento - Todos os direitos reservados</p>
             <p>📞 (81) 9 9697-5227 | (81) 9 8438-6182</p>
@@ -292,10 +286,9 @@
         const projetos = [
             { icone: "🎯", nome: "Mapeia Lead", descricao: "Sistema de prospecção por CNAE. Busca empresas por segmento e estado em segundos.", tecnologias: ["Python", "Streamlit", "Pandas"], link: "https://mapear-lead.streamlit.app" },
             { icone: "🧮", nome: "Conta Certa", descricao: "Conciliação financeira. Compara SIAC vs Operadora, mostra divergências por terminal.", tecnologias: ["Python", "Streamlit", "Pandas"], link: "https://conta-certa.streamlit.app" },
-            { icone: "📦", nome: "OGGI WMS", descricao: "Sistema de Gestão Logística. Controle de missões, ruas, endereçamentos, equipe.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistemaoggi.netlify.app" },
-            { icone: "📊", nome: "Sistema de Cotações", descricao: "Gestão de compras. Itens em falta, cotações de fornecedores, análise.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistema-cotacao.netlify.app" },
-            { icone: "🧠", nome: "NeuroApp", descricao: "Apoio emocional. Simulador que acolhe e sugere melhorias para o dia a dia.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://meuneuroapp.netlify.app" },
-            { icone: "🌐", nome: "Portfólio Pessoal", descricao: "Site profissional com minha trajetória, habilidades e contatos.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://meu-blog-html.netlify.app" }
+            { icone: "📦", nome: "OGGI WMS", descricao: "Sistema de Gestão Logística. Controle de missões, ruas, endereçamentos, equipe.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistema-oggi.vercel.app" },
+            { icone: "📊", nome: "Sistema de Cotações", descricao: "Gestão de compras. Itens em falta, cotações de fornecedores, análise.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://sistema-de-cotacoes-html.vercel.app" },
+            { icone: "🧠", nome: "NeuroApp", descricao: "Apoio emocional. Simulador que acolhe e sugere melhorias para o dia a dia.", tecnologias: ["HTML", "CSS", "JavaScript"], link: "https://neuro-app-pi.vercel.app" }
         ];
 
         function carregarProjetos() {
@@ -341,15 +334,14 @@ Atuar como Prospector/Consultor Comercial.
 • Gestão Financeira – Unifatecie (Previsão 2026)
 • Segurança da Informação – Unifatecie (Previsão 2027)
 
-🚀 PROJETOS PRÓPRIOS (6 projetos no ar)
-• Mapeia Lead - Prospecção por CNAE (link: https://mapear-lead.streamlit.app)
+🚀 PROJETOS PRÓPRIOS (5 projetos no ar)
+• Mapeia Lead - Prospecção por CNAE
 • Conta Certa - Conciliação financeira
 • OGGI WMS - Gestão logística
 • Sistema Cotações - Gestão de compras
 • NeuroApp - Apoio emocional
-• Portfólio - Site profissional
 
-🔗 Portfólio completo: https://meu-portfolio-glailton.netlify.app
+🔗 Portfólio: https://fanpage-glailton-nascimento.vercel.app
 `;
             const blob = new Blob([curriculo], { type: 'text/plain' });
             const link = document.createElement('a');
@@ -363,4 +355,4 @@ Atuar como Prospector/Consultor Comercial.
         carregarProjetos();
     </script>
 </body>
-</html>
+    </html>
