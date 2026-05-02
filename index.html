@@ -262,7 +262,8 @@
             <h1>Glailton Sant' Anna do Nascimento</h1>
             <p>🎯 Em transição para TI | Prospecção Comercial | 6 projetos no ar</p>
             <div>
-                <button class="btn-cv" id="btnDownloadCV">📄 Baixar Currículo</button>
+                <!-- Botão agora aponta diretamente para a página do currículo -->
+                <a href="curriculo.html" target="_blank" class="btn-cv">📄 Ver / Baixar Currículo</a>
                 <a href="https://wa.me/5581984386182?text=Olá%20Glailton,%20vi%20seu%20portfólio!" target="_blank" class="btn-contato">📱 WhatsApp</a>
             </div>
             <div class="contatos">
@@ -313,48 +314,7 @@
             });
         }
 
-        function baixarCurriculo() {
-            const curriculo = `GLAILTON SANT ANNA DO NASCIMENTO
-📍 São Lourenço da Mata/PE | 📞 (81) 9 9697-5227 | (81) 9 8438-6182
-📧 glailtonnascimento88@gmail.com
-🔗 linkedin.com/in/glailton-nascimento
-
-🎯 OBJETIVO PROFISSIONAL
-Atuar como Prospector/Consultor Comercial.
-
-💼 EXPERIÊNCIA PROFISSIONAL
-• Promotor Vendedor | Lactalis do Brasil (Batavo) | Mar/2025 – Ago/2025
-  - Abertura de novos pontos de venda
-  - Estratégias para aumento de performance
-
-• Operador de Empilhadeira | Oggi Sorvetes | Ago/2025 – Atual
-
-• Outras experiências: Tambasa S/A, Novo Atacarejo, Intelbras, Saint-Gobain, M. Dias Branco
-
-🎓 FORMAÇÃO ACADÊMICA
-• Gestão Financeira – Unifatecie (Previsão 2026)
-• Segurança da Informação – Unifatecie (Previsão 2027)
-
-🚀 PROJETOS PRÓPRIOS (6 projetos no ar)
-• Mapeia Lead - Prospecção por CNAE
-• Conta Certa - Conciliação financeira
-• OGGI WMS - Gestão logística
-• Sistema Cotações - Gestão de compras
-• NeuroApp - Apoio emocional
-• SANTANA RH SOLUÇÕES - Recrutamento digital
-
-🔗 Portfólio: https://fanpage-glailton-nascimento.vercel.app
-`;
-            const blob = new Blob([curriculo], { type: 'text/plain' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'Curriculo_Glailton.txt';
-            link.click();
-            URL.revokeObjectURL(link.href);
-        }
-
-        document.getElementById('btnDownloadCV').addEventListener('click', baixarCurriculo);
         carregarProjetos();
     </script>
 </body>
-</html>
+    </html>
